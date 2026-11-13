@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Don't Touch The Color</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="ui-layer">
+        <div id="top-bar">
+            <div id="timer">Time: 0.0s</div>
+            <div id="level-display">Level <span id="level-num">1</span></div>
+            <div id="forbidden-color-display">
+                <span>Avoid:</span>
+                <div id="color-indicator"></div>
+            </div>
+        </div>
+        <div id="level-up-announce"></div>
+
+        <div id="start-screen" class="screen active">
+            <h1>Don't Touch The Color</h1>
+            <p>Use <span class="highlight">WASD</span> or <span class="highlight">Arrow Keys</span> to move.</p>
+            <p>Dodge the <span class="highlight">forbidden color</span> shown at the top!</p>
+            <button id="start-btn">Start Game</button>
+        </div>
+
+        <div id="game-over-screen" class="screen">
+            <h1>Game Over</h1>
+            <p>You survived for <span id="final-time" class="highlight">0</span> seconds.</p>
+            <button id="restart-btn">Play Again</button>
+        </div>
+    </div>
+
+    <canvas id="gameCanvas"></canvas>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
